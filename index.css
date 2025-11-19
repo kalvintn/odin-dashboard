@@ -12,7 +12,7 @@ body {
     /* whole page structure */
     display: grid; 
     grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 0.5fr 4fr;
     grid-template-areas:
         "nav header"
         "nav main";
@@ -32,7 +32,6 @@ nav {
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: 1fr;
 
-    height: 100vh;
     min-width: 250px;
 }
 nav .icon-group {
@@ -65,7 +64,7 @@ header {
     grid-area: header;
 
     background-color: white;
-    padding: 30px;
+    padding: 20px;
 }
 header svg {
     width: 1.5em;
@@ -89,7 +88,7 @@ header svg.account_large { fill: var(--accent-color); width: 5em; }
     font-weight: bold;
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
 }
 .button-group {
     gap: 30px;
