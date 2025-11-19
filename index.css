@@ -65,6 +65,8 @@ header {
 
     background-color: white;
     padding: 20px;
+    box-shadow: 2px 2px 10px #a8a8a8;
+    z-index: 1; /* fix layering behind main */
 }
 header svg {
     width: 1.5em;
@@ -109,5 +111,5 @@ header svg.account_large { fill: var(--accent-color); width: 5em; }
 /* main: projects, announcements, trending */
 main {
     grid-area: main;
-    background-color: blue;
+    background-color: #e1e1e1;
 }
