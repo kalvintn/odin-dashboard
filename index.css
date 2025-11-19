@@ -3,6 +3,7 @@
     --accent-color: #cccccc;
 }
 body {
+    font-family: "Mulish", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -41,6 +42,7 @@ nav h1 {
 /* large logo size for "dashboard" */
 nav .icon-group:first-child svg {
     max-width: 3em;
+    padding: 0px 10px;
 }
 nav .icon-group:first-child h1 {
     font-size: 1.8em;
