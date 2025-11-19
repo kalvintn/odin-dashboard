@@ -1,14 +1,22 @@
+/* global styles */
 :root {
     --main-color: #7b70c6;
-    --accent-color: #cccccc;
+    --accent-color: #ff7ba1;
 }
 body {
     font-family: "Mulish", sans-serif;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
 
+    /* whole page structure */
+    display: grid; 
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "nav header"
+        "nav main";
+}
 
 
 
@@ -16,6 +24,7 @@ body {
 
 /* side dashboard */
 nav {
+    grid-area: nav;
     color: white;
     background-color: var(--main-color);
 
@@ -23,7 +32,6 @@ nav {
     grid-template-rows: repeat(10, 1fr);
     grid-template-columns: 1fr;
 
-    width: min(25%, 250px);
     height: 100vh;
     min-width: 250px;
 }
@@ -33,7 +41,7 @@ nav .icon-group {
 }
 nav svg {
     fill: white;
-    max-width: 1.5em;
+    width: 1.5em;
     padding: 0px 20px;
 }
 nav h1 {
@@ -41,9 +49,66 @@ nav h1 {
 }
 /* large logo size for "dashboard" */
 nav .icon-group:first-child svg {
-    max-width: 3em;
+    width: 3em;
     padding: 0px 10px;
 }
 nav .icon-group:first-child h1 {
     font-size: 1.8em;
+}
+
+
+
+
+
+/* header: search, welcome, buttons */
+header {
+    grid-area: header;
+
+    background-color: white;
+    padding: 30px;
+}
+header svg {
+    width: 1.5em;
+    padding: 0px 20px;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header input {
+    background-color: #e1e1e1;
+    padding: 7px clamp(12px, 20vw, 500px);
+    border: none;
+    border-radius: 20px;
+}
+header svg.account_small { fill: var(--accent-color); width: 3em; }
+header svg.account_large { fill: var(--accent-color); width: 5em; }
+/* flex welcome bubble to display inline */
+.welcome-bubble {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.button-group {
+    gap: 30px;
+}
+.button-group button {
+    font-weight: bold;
+    color: white;
+    background-color: var(--main-color);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 20px;
+}
+
+
+
+
+
+/* main: projects, announcements, trending */
+main {
+    grid-area: main;
+    background-color: blue;
 }
