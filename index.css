@@ -87,7 +87,7 @@ header input {
 }
 header svg.account_small { fill: var(--accent-color); width: 3em; }
 header svg.account_large { fill: var(--accent-color); width: 5em; }
-/* flex welcome bubble to display inline */
+/* flex style welcome bubble, for inline display */
 .welcome-bubble {
     font-weight: bold;
     display: flex;
@@ -112,7 +112,7 @@ header svg.account_large { fill: var(--accent-color); width: 5em; }
 
 /* main: projects, announcements, trending */
 main {
-    grid-area: main; /* whole page grid */
+    grid-area: main;
     background-color: #e1e1e1;
 
     /* grid for 'main' area */
@@ -131,7 +131,7 @@ main {
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 25px;
-    padding: 0px 25px;
+    padding: 25px;
 }
 .news-group {
     background-color: white;
