@@ -110,6 +110,25 @@ header svg.account_large { fill: var(--accent-color); width: 5em; }
 
 /* main: projects, announcements, trending */
 main {
-    grid-area: main;
+    grid-area: main; /* whole page grid */
     background-color: #e1e1e1;
+}
+.news-feed {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+.news-group {
+    max-width: 70%;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin: 20px;
+}
+.news-icon-group {
+    text-align: right;
+}
+.news-icon-group svg {
+    width: 1.5em;
+    padding: 0px 20px;
 }
